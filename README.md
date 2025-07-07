@@ -1,53 +1,43 @@
-# Redução dos Custos em Farmácias com AWS
-
-## RELATÓRIO DE IMPLEMENTAÇÃO DE SERVIÇOS AWS
+# Relatório de Implementação de Medidas de Segurança
 
 **Data:** 06/07/2025  
-**Empresa:** FarmaVida LTDA  (inventado por mim)
+**Empresa:** Farmácia Vida+  
 **Responsável:** Gustavo Gomes Martins
 
----
+## 📌 Introdução
 
-## Introdução
+Este relatório apresenta o processo de implementação de ferramentas na empresa **Farmácia Vida+**, realizado por **Gustavo Gomes Martins**.  
+O objetivo do projeto foi elencar **3 medidas de segurança** utilizando serviços da AWS, com a finalidade de aumentar a proteção dos sistemas e dados sensíveis da empresa.
 
-Este relatório apresenta o processo de implementação de serviços em nuvem na empresa **FarmaVida LTDA**, realizado por **Gustavo Gomes Martins**.  
-O objetivo do projeto foi:
+## 🔐 Descrição do Projeto
 
-- *Elencar 3 serviços da AWS aplicados à realidade da empresa*  
-- *Realizar a diminuição de custos imediatos com infraestrutura local*
+O projeto de implementação de ferramentas foi dividido em três medidas de segurança. A seguir, são descritas as etapas da implementação:
 
----
+### ✅ Medida 1: Amazon GuardDuty
 
-## Descrição do Projeto
-
-O projeto de implementação de ferramentas foi dividido em 3 etapas, cada uma com seus objetivos específicos.  
-A seguir, serão descritas as etapas do projeto:
-
-### Etapa 1
-- **Nome da ferramenta:** Amazon S3  
-- **Foco da ferramenta:** Armazenamento seguro e escalável de documentos e relatórios de vendas.  
-- **Descrição de caso de uso:** A empresa armazenava arquivos localmente, gerando risco de perda de dados. Com o Amazon S3, todos os documentos passaram a ser versionados e acessíveis via navegador, com custos reduzidos por acesso esporádico (uso de classes IA e Intelligent-Tiering).
+**Caso de uso:**  
+Serviço utilizado para detectar comportamentos suspeitos e atividades maliciosas, como varreduras de porta, chamadas de API não autorizadas ou comunicação com IPs maliciosos.  
+Foi implementado em todas as contas da farmácia para fornecer detecção inteligente de ameaças de forma contínua e automatizada.
 
 ---
 
-### Etapa 2
-- **Nome da ferramenta:** Amazon RDS  
-- **Foco da ferramenta:** Banco de dados gerenciado para controle de estoque e pedidos.  
-- **Descrição de caso de uso:** A base de dados local era instável e exigia manutenção manual. Com o RDS, foi possível automatizar backups, aumentar a disponibilidade e reduzir custos com suporte técnico e infraestrutura física.
+### ✅ Medida 2: AWS IAM com MFA obrigatório
+
+**Caso de uso:**  
+O controle de identidade e acesso (IAM) foi reforçado com a exigência de autenticação multifator (MFA) para todos os usuários privilegiados.  
+Essa medida foi essencial para reduzir o risco de acessos não autorizados a recursos sensíveis da infraestrutura.
 
 ---
 
-### Etapa 3
-- **Nome da ferramenta:** AWS Lambda  
-- **Foco da ferramenta:** Processamento automático de tarefas rotineiras e disparo de notificações.  
-- **Descrição de caso de uso:** Antes, a farmácia usava scripts manuais para gerar relatórios semanais. Agora, funções Lambda automatizam esse processo, acionando notificações por e-mail e armazenando os relatórios no S3 automaticamente.
+### ✅ Medida 3: AWS Macie
+
+**Caso de uso:**  
+AWS Macie foi implementado para identificar dados confidenciais, como CPF, dados de pagamento e informações de clientes, armazenados em buckets S3.  
+A partir dos resultados, foram aplicadas políticas de criptografia e controle de acesso aos dados mais sensíveis.
 
 ---
 
-## Conclusão
+## ✅ Conclusão
 
-A migração parcial para a nuvem com foco em armazenamento, banco de dados e automações resultou em **redução de custos operacionais**, **melhoria na segurança dos dados** e **escalabilidade para futuras integrações**.  
-O projeto mostrou que a **adoção de soluções AWS pode ser aplicada de forma acessível e estratégica**, mesmo para empresas de pequeno e médio porte no setor farmacêutico.
-
----
+Com a implementação dessas ferramentas, a Farmácia Vida+ elevou significativamente o nível de segurança da sua infraestrutura em nuvem, garantindo conformidade com boas práticas e reduzindo vulnerabilidades críticas.
 
